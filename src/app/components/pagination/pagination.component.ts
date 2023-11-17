@@ -13,13 +13,13 @@ export class PaginationComponent {
   @Input() totalPages: number = 1;
   @Output() pageChanged: EventEmitter<number> = new EventEmitter<number>();
 
-  previousPage(): void {
+  public previousPage(): void {
     if (this.currentPage > 1) {
       this.pageChanged.emit(this.currentPage - 1);
     }
   }
 
-  nextPage(): void {
+  public nextPage(): void {
     if (this.currentPage < this.totalPages) {
       this.pageChanged.emit(this.currentPage + 1);
     }

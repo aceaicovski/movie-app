@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import {MovieListComponent} from "./components/movie-list-component/movie-list-component.component";
+import {MovieListComponent} from "./components/movie-list-component/movie-list.component";
 import {HttpClientModule} from "@angular/common/http";
 import {NavBarComponent} from "./components/nav-bar/nav-bar.component";
 

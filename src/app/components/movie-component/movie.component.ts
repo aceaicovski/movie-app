@@ -4,23 +4,23 @@ import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {Movie} from "../../models/movie.interface";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {Router, RouterLink} from "@angular/router";
-import {MovieService} from "../../services/movie-service.service";
+import {MovieService} from "../../services/movie.service";
 
 @Component({
-  selector: 'app-movie-component',
+  selector: 'app-movie',
   standalone: true,
   imports: [CommonModule, NgOptimizedImage, MatTooltipModule, RouterLink],
-  templateUrl: './movie-component.component.html',
-  styleUrl: './movie-component.component.css'
+  templateUrl: './movie.component.html',
+  styleUrl: './movie.component.css'
 })
-export class MovieComponentComponent {
+export class MovieComponent {
   @Input({required: true}) movie: Movie = {};
   @Output() movieClicked: EventEmitter<Movie> = new EventEmitter<Movie>();
 
 
   constructor(private router: Router, private movieService: MovieService) {}
 
-  navigateToDetails(): void {
+  public navigateToDetails(): void {
     this.movieService.setSelectedMovie(this.movie);
 
     // Navigate to details page

@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {Movie} from "../../models/movie.interface";
-import {MovieService} from "../../services/movie-service.service";
+import {MovieService} from "../../services/movie.service";
 
 @Component({
   selector: 'app-movie-detail',
