@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { MovieService } from "../../services/movie.service";
 import { MovieComponent } from "../movie-component/movie.component";
 import {Movie} from "../../models/movie.interface";
-import { NgxPaginationModule } from "ngx-pagination";
-import {MatPaginatorModule} from "@angular/material/paginator";
 import {PaginationComponent} from "../pagination/pagination.component";
 
 @Component({
